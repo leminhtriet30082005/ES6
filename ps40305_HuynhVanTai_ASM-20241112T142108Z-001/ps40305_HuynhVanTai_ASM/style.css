@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    clear: both;
+}
+.banner{
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+nav{
+    width: 100%;
+    height: 40px;
+}
+.menu{
+    list-style: none;
+    height: 40px;
+}
+ul.menu>li{
+    float: left;
+}
+ul.menu>li>a{
+    display:block;
+    line-height: 40px;
+    text-decoration: none;
+    padding:0 35px;
+    color: grey;
+    font-weight: bolder;
+}
+ul.menu>li>a:hover{
+    color: black;
+    background-color: aqua;
+}
+section{
+    width: 100%;
+}
+
+.col25{
+    position: relative;
+    margin-top: 10px;
+    float: left;
+    width: 25%; 
+    text-align: center;
+}
+.col25:hover{
+    box-shadow: 0 0 5px grey;
+}
+.col25 .ten{
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+.col25 .dg{
+    padding-bottom: 10px;
+    font-size: 16pt;
+    font-weight: bolder;
+    color: green;
+}
+.col25 img{
+    width: 90%;
+    height: 300px;
+}
+
+.rongcot img{
+    width: 150px;
+}
+.table{
+    width: 100%;
+    border: 1;
+    border-collapse: collapse;
+}
+
+
+footer {
+    font-size: 18px;
+}
+.footer-trai {
+    float: left;
+    margin-right: 90px;
+    margin-left: 0px;
+}
+.footer-trai ul {
+    list-style: none;
+}
+.footer-trai p {
+    margin-bottom: 5px;
+}
+.footer-trai ul a {
+    text-decoration: none;
+}
+.giua1 {
+    float: left;
+    margin-right: 20px;
+}
+.giua2 {
+    margin-left: 20px;
+    float: left;
+    margin-right: 40px;
+}
+.giua2 ul {
+    list-style: none;
+    line-height: 40px;
+}
+.giua2 ul a {
+    text-decoration: none;
+}

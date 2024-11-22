@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS40293_LEMINHTRIET_ASM1</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+   
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <img src="img/00.jpg" alt="" style="width: 100%;">
+        </div>
+
+        
+
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">TRANG CHỦ</a></li>
+                <li><a href="#">SẢN PHẨM</a></li>
+                <li><a href="#">KHUYẾN MÃI</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100040948984159&mibextid=LQQJ4d">LIÊN HỆ</a></li>
+            
+                <li><a href="giohang.html">GIỎ HÀNG</a></li>
+                <li><a href="dangnhap.html">ĐĂNG NHẬP</a></li>
+                <li><a href="dangki.html">ĐĂNG KÍ</a></li>.
+            </ul>
+        </nav>
+        <div class="row"> 
+            <div class="left">
+                <i class="fa-solid fa-angles-left vitri1" onclick="left()"></i>
+                <i class="fa-solid fa-angles-right vitri2" onclick="right()"></i>
+                <img src="img/01.jpg" alt="" id="banner">
+            </div>
+            <div class="right"></div>
+        </div>
+         <hr>  
+         <div class="row" align="center">
+            <div id="giohang">
+             <table border="1" id="show_table"></table>
+            </div>
+        </div>
+        
+        
+        <nav align="center"><h3>SẢN PHẨM BÁN CHẠY</h3></nav>
+
+        <div class="section">
+            <div class="col25">
+                <img src="img/05.jpg" alt="">
+                <h3 msp="A001">KOREA DOODLES T-SHIRT </h3>
+                <h3 dongia="99000">99.000 đ</h3>
+                <input id="fm_number" type="number">
+                <button onclick="muangay(this)">mua ngay</button>
+            </div>
+
+            <div class="col25">
+                <img src="img/06.jpg" alt="">
+                <h3 msp="A002">KOREA DOODLES T-SHIRT </h3>
+                <h3 dongia="199000">199.000đ</h3>
+                <input id="fm_number" type="number">
+                <button onclick="muangay(this)">mua ngay</button>
+            </div>
+
+            <div class="col25">
+                <img src="img/07.jpg" alt="">
+                <h3 msp="A003">KOREA DOODLES T-SHIRT </h3>
+                <h3 dongia="299000">299.000 đ</h3>
+                <input id="fm_number" type="number">
+                <button onclick="muangay(this)">mua ngay</button>
+                </form>
+            </div>
+
+            <div class="col25">
+                <img src="img/08.jpg" alt="">
+                <h3 msp="A004">KOREA DOODLES T-SHIRT </h3>
+                <h3 dongia="599000">599.000 đ</h3>
+                <input id="fm_number" type="number">
+                <button onclick="muangay(this)">mua ngay</button>
+            </div>
+
+            <div class="col25">
+                <img src="img/09.jpg" alt="">
+                <h3 msp="A005">KOREA DOODLES T-SHIRT </h3>
+                <h3 dongia="799000">799.000 đ</h3>
+                <input id="fm_number" type="number">
+                <button onclick="muangay(this)">mua ngay</button>
+            </div>
+
+            <div class="col25">
+                <img src="img/10.jpg" alt="">
+                <h3 msp="A006">KOREA DOODLES T-SHIRT </h3>
+                <h3 dongia="999000">999.000 đ</h3>
+                <input id="fm_number" type="number">
+                <button onclick="muangay(this)">mua ngay</button>
+            </div>
+
+            <div class="col25">
+                <img src="img/11.jpg" alt="">
+                <h3 msp="A007">KOREA DOODLES T-SHIRT </h3>
+                <h3 dongia="1999000">1.999.0000 đ</h3>
+                <input id="fm_number" type="number">
+                <button onclick="muangay(this)">mua ngay</button>
+            </div>
+
+            <div class="col25">
+                <img src="img/12.jpg" alt="">
+                <h3 msp="A008">KOREA DOODLES T-SHIRT</h3>
+                <h3 dongia="1299000">1.299.000 đ</h3>
+                <input id="fm_number" type="number">
+                <button onclick="muangay(this)">mua ngay</button>
+            </div>
+
+            
+
+            <footer align="center"><img src="img/13.jpg" width="100%" height="300px">
+                <a href="index.html" target="_blank">Copyright © 2024 LEISURY. Powered by Haravan</a>
+            </footer>
+    
+    <script>
+        var hinh = ['img/01.jpg','img/02.jpg','img/03.jpg'];
+        let i = 0;
+        function left() {
+            i++;
+            if ( i == hinh.length) {i = 0}
+            document.getElementById('banner').src = hinh[i];
+        }
+        function right() {
+            i++;
+            if ( i == hinh.length) {i = 0}
+            document.getElementById('banner').src = hinh[i];
+        } 
+        setInterval(right,1700);
+    </script>
+    <script>
+        var giohang = new Array();
+
+function muangay(x){
+    var cha = x.parentElement; // Trả về cha
+    var hinh = cha.children[0].src; 
+    var tensp = cha.children[1].getAttribute('msp');
+    var dongia = cha.children[2].getAttribute('dongia')*1;
+    var soluong = cha.children[3].value*1;
+    var thanhtien = dongia*soluong;
+    // add vào mảng item trước khi đưa vào giỏ hàng
+    var item = new Array(hinh,tensp,dongia,soluong,thanhtien);
+    // add vào mảng giỏ hàng các item-----------
+    if(giohang.length==0){
+        giohang.push(item);
+    }
+    else
+        {
+            for (var i = 0; i < giohang.length; i++){
+                if  (giohang[i][1]==tensp){
+                    alert('Trùng mã Sản phảm tăng số lượng..')
+                    giohang[i][3] += soluong // tính lại số lượng 
+                    giohang[i][4] = giohang[i][2]*giohang[i][3]; // tính số lượng 
+                    break;
+                }}
+                    if (i==giohang.length) {
+                        giohang.push(item);
+                        alert('Bạn vừa thêm sản phẩm mới');
+                    }
+    }
+    console.log(giohang);
+        view_table();
+}    
+    function view_table(){
+        var tongtien=0; 
+        var kq =
+        ` <tr>
+            <th>STT</th>
+            <th>Hình</th>
+            <th>Tên Sản Phẩm</th>
+            <th>Số Lượng</th>
+            <th>Đơn Giá</th>
+            <th>Thành Tiền</th>
+            <th>Xóa</th>
+        </tr>`
+        //show các dòng sản phẩm tra table .....
+        for(let i = 0; i<giohang.length; i++){
+            let stt =i+1;
+            tongtien += giohang[i][4];
+
+       
+        kq +=
+            `<tr>
+                <td>${stt}</td>
+                <td><img src="${giohang[i][0]}" alt=""></td>
+                <td>${giohang[i][1]}</td>
+                <td>${giohang[i][2]}</td>
+                <td>${giohang[i][3]}</td>
+                <td>${giohang[i][4]}</td>
+                <td><button onclick="xoa(this,${i})">Xóa</button></td>
+            </tr>`
+        }
+        kq +=
+            `<tr>
+                <td colspan="4">Tổng thành tiền</td>
+                <td colspan="2">${tongtien}</td>
+                <td colspan="1"><button>Mua Ngay</button></td>
+            </tr>`
+        document.getElementById('show_table').innerHTML = kq;
+    }
+    
+    function xoa(node,vtr){
+        console.log(node.parentElement.parentElement)
+        node.parentElement.parentElement.remove();
+        giohang.splice(node,1);
+        view_table();
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+@media only screen and (max-wit: 600px){
+}
+
+@media only screen and (min-wit: 600px) and (max-with: 786px){
+}
+
+@media only screen and (min-wit: 786px) and (max-with: 992px){
+}
+
+@media only screen and (min-wit: 992px) and (max-with: 1200px){
+}
+
+@media only screen and (min-wit: 1200px){
+}
+
+@media only screen and (max-wit: 600px) and (orientation: portrait){
+}
+
+@media only screen and (max-wit: 600px) and (orientation: landscape){
+}
+
+@media only screen and (min-wit: 600px) and(max-with: 786px) and (orientation: portrait){
+}
+
+@media only screen and (min-wit: 600px) and(max-with: 786px) and (orientation: landscape){
+}
+
+@media only screen and (min-wit: 786px) and(max-with: 992px) and (orientation: portrait){
+}
+
+@media only screen and (min-wit: 786px) and(max-with: 992px) and (orientation: landscape){
+}
+
+@media only screen and (min-wit: 992px) and(max-with: 1200px) and (orientation: portrait){
+}
+
+@media only screen and (min-wit: 992px) and(max-with: 1200px) and (orientation: landscape){
+}
+
+@media only screen and (min-wit: 1200px) and (orientation: portrait){
+}
+
+@media only screen and (min-wit: 1200px) and (orientation: landscape){
+}

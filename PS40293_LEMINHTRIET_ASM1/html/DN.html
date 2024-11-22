@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí và Đăng nhập</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/ĐN.css">
+    <style>
+        /* styles.css */
+        .error {
+            border: 1px solid red;
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 align="center">LEISURY</h1>
+        <nav align="center">
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="#products">Sản Phẩm</a></li>
+                <li><a href="#hot-products">HOT</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+                <li><a href="GioHang.html">Giỏ Hàng</a></li>
+                <li><a href="DN.html">Đăng Nhập</a></li>
+                
+            </ul>
+            
+        </nav>
+        <hr>
+        <br><br>
+    <div class="container">
+        <div class="form-container">
+            <form id="register-form">
+                <h2>Quên Mật Khẩu</h2>
+                <input type="text" id="register-username" placeholder="Tên đăng nhập " onblur="handleBlur(event)">
+                
+                <button type="submit">Gửi mã xác nhận</button>
+                <p id="register-error" class="error-message"></p>
+            </form>
+            <form id="login-form">
+                <h2>Đổi Mật Khẩu</h2>
+                <input type="text" id="login-username" placeholder="Mật khẩu mới" required onblur="handleBlur(event)">
+                <input type="password" id="login-password" placeholder="Nhập lại mật khẩu" required onblur="handleBlur(event)">
+                <button type="submit">Xác nhận đổi</button>
+                <p id="login-error" class="error-message"></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        // Handle blur event
+        function handleBlur(event) {
+            const inputField = event.target;
+            const inputValue = inputField.value;
+
+            if (!inputValue) {
+                // If the input field is empty, show an error message
+                inputField.classList.add('error');
+                inputField.nextElementSibling.textContent = '';
+            } else {
+                // Clear the error message if the input field is not empty
+                inputField.classList.remove('error');
+                inputField.nextElementSibling.textContent = '';
+            }
+        }
+
+        // Example: Add event listeners for form submission to prevent default action
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Add your form submission logic here
+        });
+
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Add your form submission logic here
+        });
+
+        const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+        let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser')) || null;
+
+        const registerForm = document.getElementById('register-form');
+        const loginForm = document.getElementById('login-form');
+
+        const registerError = document.getElementById('register-error');
+        const loginError = document.getElementById('login-error');
+
+        registerForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const username = document.getElementById('register-username').value;
+            const password = document.getElementById('register-password').value;
+
+            if (registeredUsers.find(user => user.username === username)) {
+                registerError.textContent = 'Username already exists.';
+                registerError.style.display = 'block';
+            } else {
+                registeredUsers.push({ username, password });
+                localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
+                registerError.style.display = 'none';
+                alert('Đăng kí thành công!');
+            }
+        });
+
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+
+            const user = registeredUsers.find(user => user.username === username && user.password === password);
+
+            if (user) {
+                loggedInUser = user;
+                localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
+                loginError.style.display = 'none';
+                alert('Đăng nhập thành công!');
+            } else {
+                loginError.textContent = 'Sai tên hoặc mật khẩu.';
+                loginError.style.display = 'block';
+            }
+        });
+
+        if (loggedInUser) {
+            alert('Bạn đã đang nhập.');
+        }
+    </script>
+    </main>
+</body>
+</html>

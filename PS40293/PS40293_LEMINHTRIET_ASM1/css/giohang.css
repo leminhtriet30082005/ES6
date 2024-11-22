@@ -1,0 +1,220 @@
+#giohang{
+    float: left;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;  
+}
+.col3 img{
+    width: 100%;
+    height: 300px;
+
+}
+.col3 img:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.col3{
+    float: left;
+    margin: 5px;
+    min-height: 250px;
+    width: calc(25% - 10px);
+    border: 1px solid burlywood;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+#giohang table img{
+    width: 200px;
+}
+#giohang table{
+    text-align: center;
+}
+table button{
+    width: 100px;
+    background-color: burlywood;
+    border-radius: 10px;
+    color: brown;
+}
+table button:hover{
+    background-color: white;
+    color: burlywood;
+}
+table th{
+    background-color: aqua;
+}
+#fm_number{
+    border: 2px solid burlywood;
+    margin: 15px 0;
+    width: 200px;
+    height: 52px;
+    border-radius: 50px;
+}
+
+.col3 button{
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.col3 button:hover{
+    background-color: burlywood;
+    color: brown;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    clear: both;
+}
+.banner{
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+nav{
+    width: 100%;
+    height: 40px;
+}
+.left img{
+    width: 100%;
+    height:600px;
+}
+.vitri1{
+    float: left;
+    position: absolute;
+    top: 115%;
+    left: 5px;
+    font-size: 40px;
+}
+.vitri2{
+    float: left;
+    position: absolute;
+    top: 115%;
+    right: 5px;
+    font-size: 40px;
+}
+.right{
+    float: left;
+    height: 400px;
+    
+}
+h3{
+    font-size: 20px;
+    color:#111;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: 1px solid #bebebe;
+   
+    color:black;
+    font-weight: 1000px;
+}
+.menu{
+    list-style: none;
+    height: 40px;
+}
+ul.menu>li{
+    float: left;
+}
+
+ul.menu>li>a{
+    display:block;
+    line-height: 40px;
+    text-decoration: none;
+    padding:0 35px;
+    color: grey;
+    font-weight: bolder;
+}
+ul.menu>li>a:hover{
+    color: black;
+    background-color: rgb(171, 248, 255);
+}
+section{
+    width: 100%;
+}
+
+.col25{
+    position: relative;
+    margin-top: 10px;
+    float: left;
+    width: 25%; 
+    text-align: center;
+}
+.col25:hover{
+    box-shadow: 0 0 5px grey;
+}
+.col25 .ten{
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+.col25 .dg{
+    padding-bottom: 10px;
+    font-size: 16pt;
+    font-weight: bolder;
+    color: green;
+}
+.col25 img{
+    width: 90%;
+    height: 300px;
+}
+
+.rongcot img{
+    width: 150px;
+}
+.table{
+    width: 100%;
+    border: 1;
+    border-collapse: collapse;
+}
+
+
+footer {
+    font-size: 18px;
+}
+.footer-trai {
+    float: left;
+    margin-right: 90px;
+    margin-left: 0px;
+}
+.footer-trai ul {
+    list-style: none;
+}
+.footer-trai p {
+    margin-bottom: 5px;
+}
+.footer-trai ul a {
+    text-decoration: none;
+}
+.giua1 {
+    float: left;
+    margin-right: 20px;
+}
+.giua2 {
+    margin-left: 20px;
+    float: left;
+    margin-right: 40px;
+}
+.giua2 ul {
+    list-style: none;
+    line-height: 40px;
+}
+.giua2 ul a {
+
+    text-decoration: none;
+}
